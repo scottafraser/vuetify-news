@@ -34,6 +34,9 @@
 import axios from 'axios'
 import MainContent from './components/MainContent.vue'
 import SideMenu from './components/SideMenu.vue' // import the SideMenu component
+
+
+console.log(process.env.VUE_APP_SECRET)
 export default {
   components: {
     MainContent,
@@ -42,7 +45,7 @@ export default {
   data() {
     return {
       drawer: false,
-      api_key: '6bd6c9a75fdb47b888def4eaec38d6c2',
+      api_key: process.env.VUE_APP_SECRET,
       articles: [],
       errors: []
     }
@@ -72,4 +75,5 @@ export default {
     }
   }
 }
+
 </script>
